@@ -1,0 +1,32 @@
+% Problem 2: Circle
+
+% Input value of x's and y's
+p = input ('Value of x1: ');
+q = input ('Value of y1: ');
+r = input ('Value of x2: ');
+s = input ('Value of y2: ');
+t = input ('Value of x3: ');
+u = input ('Value of y3: ');
+
+% To compute value of D, E, & F
+D = (((r.^2)-(p.^2)).*(u-q)+((s.^2)-(q.^2)).*(u-q)+((p.^2)-(t.^2)).*(s-q)+((q.^2)-(u.^2)).*(s-q)) / ((u-q).*(p-r)-(p-t).*(s-q));
+E = (((p.^2)-(t.^2)).*(p-r)+((q.^2)-(u.^2)).*(p-r)+((r.^2)-(p.^2)).*(p-t)+((s.^2)-(q.^2)).*(p-t)) / ((p-r).*(u-q)-(s-q).*(p-t));
+F = - (p.^2) - (q.^2) - (D).*(p) - (E).*(q);
+
+% To compute for center of circle
+h = D ./ -2;
+k = E ./ -2;
+
+v = [h,k];
+
+% To compute for radius of circle
+w = sqrt (h .* h) + (k .* k) - (F);
+
+x = [D,E,F];
+
+disp('Center: ')
+disp(v)
+disp('Radius: ')
+disp(w)
+disp('Vector [D,E,F]: ')
+disp(x)
