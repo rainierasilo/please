@@ -1,0 +1,104 @@
+samples
+a = [38,37,66,35,99,51,27,19,4,7]
+b = [99,27,12,5,38,37,83,71,76,24]
+
+%Problem 3: Norm
+
+% don't forget to input values in []
+a = input ('Value of x in []: ');
+b = input ('Value of y in []: ');
+
+% To have x and y in matrix nx2
+c = [a', b'];
+
+P1 = polyfit (a,b,1);
+f1 = polyval(P1,a);
+e1 = b - f1;
+    
+P2 = polyfit (a,b,2); 
+f2 = polyval(P2,a);
+e2 = b - f2;
+    
+P3 = polyfit (a,b,3); 
+f3 = polyval(P3,a);
+e3 = b - f3;
+    
+P4 = polyfit (a,b,4); 
+f4 = polyval(P4,a);
+e4 = b - f4;
+    
+P5 = polyfit (a,b,5); 
+f5 = polyval(P5,a);
+e5 = b - f5;
+
+P6 = polyfit (a,b,6); 
+f6 = polyval(P6,a);
+e6 = b - f6;
+
+P7 = polyfit (a,b,7); 
+f7 = polyval(P7,a);
+e7 = b - f7;
+
+P8 = polyfit (a,b,8); 
+f8 = polyval(P8,a);
+e8 = b - f8;
+
+P9 = polyfit (a,b,9); 
+f9 = polyval(P9,a);
+e9 = b - f9;
+ 
+P10 = polyfit (a,b,10); 
+f10 = polyval(P10,a);
+e10 = b - f10;
+    
+% to put normalized in vectors
+d = norm(e1);
+e = norm(e2);
+f = norm(e3);
+g = norm(e4);
+h = norm(e5);
+i = norm(e6);
+j = norm(e7);
+k = norm(e8);
+l = norm(e9);
+m = norm(e10);
+
+% normalized in vectors
+n = [d,e,f,g,h,i,j,k,l,m]
+
+%t to find the least norm 
+o = min(n)     
+    
+if o == n(1)
+    P1 = polyfit (a,b,1);
+    disp(P1)
+elseif o == n(2)
+    P2 = polyfit (a,b,2);
+    disp(P2)
+elseif o == n(3)
+    P3 = polyfit (a,b,3);
+    disp(P3)
+elseif o == n(4)
+    P4 = polyfit (a,b,4);
+    disp(P4)
+elseif o == n(5)
+    P5 = polyfit (a,b,5);
+    disp(P5)
+elseif o == n(6)
+    P6 = polyfit (a,b,6);
+    disp(P6)
+elseif o == n(7)
+    P7 = polyfit (a,b,7);
+    disp(P7)
+elseif o == n(8)
+    P8 = polyfit (a,b,8);
+    disp(P8)
+elseif o == n(9)    
+    P9 = polyfit (a,b,9);
+    disp(P9)
+else 
+    P10 = polyfit (a,b,10); 
+    disp(P10)
+end
+
+return
